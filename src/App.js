@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CustomTable from './CustomTable';
+
+const columns = ['ID', 'Name']; // Add more columns as needed
+
+const data = [
+  { ID: 1, Name: 'Ankit' },
+  { ID: 2, Name: 'Akash' },
+  { ID: 3, Name: 'Anushka' },
+  { ID: 4, Name: 'Mrinal' },
+  { ID: 15, Name: 'Nirmal' },
+  { ID: 26, Name: 'Anup' },
+  { ID: 37, Name: 'sanjeev' },
+  { ID: 8, Name: 'Priya' },
+  { ID: 9, Name: 'Abhishek' },
+  { ID: 10, Name: 'Divya' },
+  { ID: 11, Name: 'Talha' },
+  { ID: 12, Name: 'Masoom' },
+  { ID: 13, Name: 'Abrar' },
+  { ID: 14, Name: 'Ranvijay' },
+  
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CustomTable columns={columns} data={data} />
     </div>
   );
 }
